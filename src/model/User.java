@@ -4,6 +4,10 @@ public class User extends Person{
     private String city;
     private String street;
 
+    public User() {
+        super();
+    }
+
     public String getCity() {
         return city;
     }

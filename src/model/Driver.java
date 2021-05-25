@@ -5,7 +5,9 @@ public class Driver extends Person{
     private double rating;
     private boolean free;
 
+    public Driver() {
 
+    }
 
 
     public boolean isFree() {

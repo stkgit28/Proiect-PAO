@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Product {
+public abstract class Product implements Comparable<Product> {
     protected long id;
     protected String name;
     protected double price;
@@ -47,5 +47,16 @@ public abstract class Product {
     @Override
     public String toString(){
         return name  + "/" + price + "/" + restName;
+    }
+
+    @Override
+    public int compareTo(Product product){
+        if(this.price > product.price){
+            return 1;
+        } else if(this.price == product.price){
+            return 0;
+        } else {
+            return -1;
+        }
     }
 }

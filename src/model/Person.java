@@ -7,6 +7,10 @@ public abstract class Person {
     protected int age;
     protected String email;
 
+    public Person() {
+
+    }
+
     public long getId() {
         return id;
     }

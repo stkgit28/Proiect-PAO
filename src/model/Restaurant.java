@@ -1,17 +1,11 @@
 package model;
 
+import java.util.*;
+
 public class Restaurant {
     private long restaurantId;
     private String restaurantName;
-    private Product[] products = new Product[100];
-
-    public String getRestaurantName() {
-        return restaurantName;
-    }
-
-    public void setRestaurantName(String restaurantName) {
-        this.restaurantName = restaurantName;
-    }
+    private Set<Product> products = new TreeSet<>();
 
     public long getRestaurantId() {
         return restaurantId;
@@ -21,15 +15,23 @@ public class Restaurant {
         this.restaurantId = restaurantId;
     }
 
-    public Product[] getProducts() {
+    public String getRestaurantName() {
+        return restaurantName;
+    }
+
+    public void setRestaurantName(String restaurantName) {
+        this.restaurantName = restaurantName;
+    }
+
+    public Set<Product> getProducts() {
         return products;
     }
 
-    public void setProducts(Product[] products) {
+    public void setProducts(Set<Product> products) {
         this.products = products;
     }
 
-    public Restaurant(long restaurantId, String restaurantName, Product[] products) {
+    public Restaurant(long restaurantId, String restaurantName, Set<Product> products) {
         this.restaurantId = restaurantId;
         this.restaurantName = restaurantName;
         this.products = products;
